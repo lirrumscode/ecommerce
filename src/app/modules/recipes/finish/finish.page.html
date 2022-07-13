@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar mode="ios" color="dark">
+    <ion-buttons slot="start">
+      <img
+        src="./assets/icons/left.svg"
+        alt="img"
+        class="back"
+      /><ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class="div-add-fav" *ngIf="dataFinish >= 0">
+          <div class="containt-img">
+            <img src="assets/icons/salad.png" alt="img" class="img" />
+          </div>
+          <p class="txt-alert">
+            ¡Welcome to RecetApp, <br /><span
+              >Please add recipes that you love!</span
+            >
+          </p>
+        </div>
+        <ion-col size="12" *ngIf="dataFinish != []">
+          <ion-row>
+            <ion-col size="6" *ngFor="let data of dataFinish">
+              <img
+                src="assets/icons/new.png"
+                alt="img"
+                class="img-condition"
+                *ngIf="data.condition === 'new'"
+              />
+              <img [src]="data.image" alt="img" class="img-fav" />
+              <ion-row>
+                <ion-col size="12">
+                  <p class="txt-price" (click)="goToDetail(data.id)">{{ data.title }}</p>
+                  <p class="txt-quantity" *ngFor="let data of data.dishTypes">
+                    {{ data }}
+                  </p>
+                  <p class="txt-quantity" *ngFor="let data of data.diets">
+                    {{ data }}
+                  </p>
+                </ion-col>
+                <ion-col size="12">
+                  <p class="title">{{ data.creditsText }}</p>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

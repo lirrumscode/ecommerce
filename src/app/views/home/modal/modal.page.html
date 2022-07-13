@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="dark" fullscreen>
+  <div class="ion-padding">
+    <section class="sec-inf">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" *ngIf="validateDataCard">
+            <ion-col size="12">
+              <h2 class="title">Menu Information</h2>
+            </ion-col>
+            <ion-card>
+              <img
+                *ngIf="dataCard"
+                [src]="dataCard.image"
+                alt="img"
+                class="img"
+              />
+              <ion-card-subtitle
+                >{{ dataCard.restaurantChain }}</ion-card-subtitle
+              >
+              <ion-card-title>{{ dataCard.title }}</ion-card-title>
+              <ion-card-content>
+                <ion-text color="dark"> <b>Breadcrumbs</b> </ion-text>
+                <br />
+                <p class="text" *ngFor="let items of dataCard.breadcrumbs">
+                  {{ items }}
+                </p>
+                <ion-text color="dark"> <b>Nutritions</b> </ion-text>
+                <br />
+                <p class="text">Calories: {{ dataCard.nutrition.calories }}</p>
+                <p class="text">
+                  {{ dataCard.nutrition.carbs }} - {{ dataCard.nutrition.fat }}
+                </p>
+                <ion-text color="dark"> <b>Nutrients</b> </ion-text>
+                <br />
+                <p
+                  class="text"
+                  *ngFor="let items of dataCard.nutrition.nutrients"
+                >
+                  {{ items.name }} - {{ items.percentOfDailyNeeds }}% gr
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12">
+            <img
+              src="./assets/icons/card.png"
+              alt="img"
+              class="img-one"
+              *ngIf="!validateDataCard"
+            />
+            <p *ngIf="!validateDataCard" class="heading">
+              Doesn't exist a information for this item!
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+  </div>
+</ion-content>

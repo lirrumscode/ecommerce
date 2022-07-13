@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar mode="ios" color="dark">
+    <ion-buttons slot="start">
+      <img
+        src="./assets/icons/left.svg"
+        alt="img"
+        class="back"
+      /><ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="dark">
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <section class="sec-inf">
+            <ion-row>
+              <ion-col size="8">
+                <h2 class="heading">Menu: <span>{{ item }}</span></h2>
+              </ion-col>
+              <ion-col size="2">
+                <h2 class="heading-one" (click)="goToAll(item)">See more</h2>
+              </ion-col>
+            </ion-row>
+
+            <ion-list style="border-radius: 20px; background: #222428;">
+              <ion-item
+                lines="none"
+                *ngFor="let items of dataItems"
+                color="dark"
+              >
+                <ion-avatar>
+                  <img
+                  src="https://spoonacular.com/recipeImages/garlic.png"
+                  *ngIf="!items.image"
+                />                  
+                <img [src]="items.image" *ngIf="items.image" />
+                </ion-avatar>
+                <ion-label (click)="goModal(items.id)">
+                  <h2 class="title">{{ items.title }}</h2>
+                  <p class="text">{{ items.restaurantChain }}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

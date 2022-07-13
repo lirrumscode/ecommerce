@@ -1,0 +1,63 @@
+.containt-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .img {
+    width: 50%;
+  }
+}
+.img-fav {
+  width: 100%;
+  border-radius: 10px;
+}
+.img-condition {
+  width: 50px;
+  position: absolute;
+  right: 4px;
+}
+.title {
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 12px;
+  margin-top: -8px;
+}
+.txt-quantity {
+  text-align: left;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.txt-price {
+  font-size: 16px;
+  text-align: left;
+  padding-left: 10px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.div-add-fav {
+  width: 100%;
+  position: absolute;
+  top: -300%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+.txt-alert {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  span {
+    font-weight: 300;
+    font-size: 20px;
+  }
+}
+.back {
+  width: 22px;
+  position: absolute;
+  right: 40px;
+}

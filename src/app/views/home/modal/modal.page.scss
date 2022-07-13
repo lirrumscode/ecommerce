@@ -1,0 +1,39 @@
+.sec-inf {
+  .img-one {
+    width: 40%;
+    display: block;
+    margin: auto;
+  }
+  .heading {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+  .title {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+  }
+  .img {
+    width: 100%;
+    height: 30vh;
+  }
+  ion-card {
+    margin-top: 0px;
+    ion-card-subtitle {
+      padding-left: 20px;
+    }
+    ion-card-title {
+      padding-left: 20px;
+    }
+    .text {
+      color: #000;
+      margin-top: 0px;
+    }
+    ion-card-content {
+      overflow-y: scroll;
+      height: 250px;
+    }
+  }
+}

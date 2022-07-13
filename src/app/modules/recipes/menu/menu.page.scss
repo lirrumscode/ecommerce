@@ -1,0 +1,42 @@
+.sec-inf {
+  .heading {
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    span {
+      font-weight: 300;
+    }
+  }
+  .heading-one {
+    color: #f57c12;
+    font-weight: 300;
+    text-align: right;
+    font-size: 14px;
+    position: absolute;
+    left: 40px;
+    width: 100%;
+    margin-top:0px;
+  }
+  .title {
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0px;
+    padding-left: 20px;
+  }
+  .text {
+    margin-top: 0px;
+    color: #fff;
+    font-weight: 300;
+    padding-left: 20px;
+    text-align: left;
+  }
+}
+.back {
+  width: 22px;
+  position: absolute;
+  right: 40px;
+}
